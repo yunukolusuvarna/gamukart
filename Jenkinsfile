@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone-Repo') {
 	    	steps {
-	        	checkout scm
+	        	git url: 'https://github.com/Tharun4153/gamukart.git',
+				branch: 'master'
 	    	}
         }
 	stage('Build') {
