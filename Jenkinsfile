@@ -16,7 +16,7 @@ pipeline {
 	stage('Deploy') {
 	   steps {
 	    sshagent(['ssh-key-for-deploy']) {
-		sh 'scp target/gamutkart.war root@172.31.47.153:/opt/tomcat/webapps'
+		sh 'scp target/gamutkart.war root@172.31.29.28:/opt/tomcat/webapps'
 	    }
 	}
     }
